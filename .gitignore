@@ -33,5 +33,4 @@ yarn-error.log*
 *.sublime-project
 
 # Other files
-package-lock.json
 yarn.lock
