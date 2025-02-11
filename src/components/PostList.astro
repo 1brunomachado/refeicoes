@@ -1,0 +1,11 @@
+---
+import { posts } from '../data/data.js';
+import Post from './Post.astro';
+---
+
+<section>
+  <h1>Refeições</h1>
+  {posts.map(post => (
+    <Post title={post.title} slug={post.slug} />
+  ))}
+</section>

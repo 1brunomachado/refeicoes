@@ -1,0 +1,26 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { posts } from '../../data/data.js';
+
+export async function getStaticPaths() {
+  return posts.map(post => ({
+    params: { slug: post.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const post = posts.find(p => p.slug === slug);
+const title = `Refeições Congeladas - ${post?.title}`
+
+if (!post) {
+  throw new Error('Post não encontrado');
+}
+---
+
+<Layout title={title}>
+  <h1>{post.title}</h1>
+  <p>{post.content}</p>
+  <a href="/">Voltar para o Blog</a>
+</Layout>
+    
+ 

@@ -1,0 +1,7 @@
+---
+const { title, slug } = Astro.props;
+---
+
+<article>
+  <h2><a href={`/posts/${slug}`}>{title}</a></h2>
+</article>
