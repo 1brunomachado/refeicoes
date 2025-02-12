@@ -2,13 +2,17 @@ export const posts = [
   {
     slug: "feijao",
     title: "Feijão",
-    content:
-      "Feijão é um nome comum para uma grande variedade de sementes de plantas de alguns gêneros da família Fabaceae. Proporciona nutrientes essenciais como proteínas, ferro, cálcio, vitaminas, carboidratos e fibras.",
-  },
-  {
-    slug: "mocoto",
-    title: "Mocotó",
-    content:
-      "O mocotó ou mão-de-vaca, é um prato tradicional baseado em patas cozidas sem casco ou extremidades de bovinos.",
+    ingredients: "água, feijão, cebola, óleo de soja, alho, sal, tomilho, manjerona e louro.",
+    portion: "250g",
+    calories: { g: "462", vd: "23" },
+    carbohydrate: { g: "77", vd: "26" },
+    sugars: { g: "0", vd: "0" },
+    added: { g: "0", vd: "0" },
+    protein: { g: "28", vd: "56" },
+    fat: { g: "5,9", vd: "9" },
+    saturated: { g: "0,9", vd: "5" },
+    trans: { g: "0", vd: "0" },
+    fiber: { g: "28", vd: "112" },
+    sodium: { g: "216", vd: "11" },
   },
 ];
