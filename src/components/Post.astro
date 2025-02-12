@@ -1,7 +1,13 @@
 ---
-const { title, slug } = Astro.props;
+const { post, slug } = Astro.props;
+const { title, category, price, weight } = post
 ---
 
 <article>
-  <h2><a href={`/posts/${slug}`}>{title}</a></h2>
+  <a href={`/post/${slug}`}>
+    <p>{category}</p>
+    <h2>{title}</h2>
+    <p>R${price}</p>
+    <p>{weight}g</p>
+  </a>
 </article>
