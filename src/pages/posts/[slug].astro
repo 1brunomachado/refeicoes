@@ -1,6 +1,8 @@
 ---
-import Layout from '../../layouts/Layout.astro';
 import { posts } from '../../data/data.js';
+import Layout from '../../layouts/Layout.astro';
+import Nutrition from '../../components/Nutrition.astro';
+import Ingredients from '../../components/Ingredients.astro';
 
 export async function getStaticPaths() {
   return posts.map(post => ({
@@ -18,8 +20,9 @@ if (!post) {
 ---
 
 <Layout title={title}>
-  <h1>{post.title}</h1>
-  <p>{post.content}</p>
+  <Nutrition post={post} />
+  <Ingredients post={post} />
+  
   <a href="/">Voltar para o Blog</a>
 </Layout>
     
