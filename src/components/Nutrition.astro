@@ -1,0 +1,74 @@
+---
+const { post } = Astro.props;
+const {portion, calories, carbohydrate, sugars, added, protein, fat, saturated, trans, fiber, sodium} = post;
+---
+
+<table>
+  <caption>Tabela Nutricional</caption>
+  <thead>
+    <tr>
+      <th>Porção de {portion}</th>
+      <th>Total</th>
+      <th>VD*</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Valor energético</th>
+      <td>{calories.g} kcal</td>
+      <td>{calories.vd}%</td>
+    </tr>
+    <tr>
+      <th>Carboidratos</th>
+      <td>{carbohydrate.g} g</td>
+      <td>{carbohydrate.vd}%</td>
+    </tr>
+    <tr>
+      <th>Açucares totais</th>
+      <td>{sugars.g} g</td>
+      <td>{sugars.vd}%</td>
+    </tr>
+    <tr>
+      <th>Açucares adicionados</th>
+      <td>{added.g} g</td>
+      <td>{added.vd}%</td>
+    </tr>
+    <tr>
+      <th>Proteínas</th>
+      <td>{protein.g} g</td>
+      <td>{protein.vd}%</td>
+    </tr>
+    <tr>
+      <th>Gorduras totais</th>
+      <td>{fat.g} g</td>
+      <td>{fat.vd}%</td>
+    </tr>
+    <tr>
+      <th>Gorduras saturadas</th>
+      <td>{saturated.g} g</td>
+      <td>{saturated.vd}%</td>
+    </tr>
+    <tr>
+      <th>Gorduras trans</th>
+      <td>{trans.g} g</td>
+      <td>{trans.vd}%</td>
+    </tr>
+    <tr>
+      <th>Fibra alimentar</th>
+      <td>{fiber.g} g</td>
+      <td>{fiber.vd}%</td>
+    </tr>
+    <tr>
+      <th>Sódio</th>
+      <td>{sodium.g} mg</td>
+      <td>{sodium.vd}%</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td >
+        *Percentual de valores diários fornecidos pela porção.
+      </td>
+    </tr>
+  </tfoot>
+</table>
