@@ -3,6 +3,7 @@ import { posts } from '../../data/data.js';
 import Layout from '../../layouts/Layout.astro';
 import Nutrition from '../../components/Nutrition.astro';
 import Ingredients from '../../components/Ingredients.astro';
+import Alert from '../../components/Alert.astro';
 
 export async function getStaticPaths() {
   return posts.map(post => ({
@@ -22,7 +23,8 @@ if (!post) {
 <Layout title={title}>
   <Nutrition post={post} />
   <Ingredients post={post} />
-  
+  <Alert note={post.allergic} />
+
   <a href="/">Voltar para o Blog</a>
 </Layout>
     
