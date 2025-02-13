@@ -4,8 +4,80 @@ import Post from './Post.astro';
 ---
 
 <section>
-  <h1>Refeições</h1>
-  {posts.map(post => (
-    <Post post={post} slug={post.slug} />
-  ))}
+  <h1>Refeições</h1> 
+
+  <div class="container">    
+    <h3>Dia a dia</h3>
+    <div class="grid">
+      {posts
+        .filter(post => post.category === "Dia a dia")
+        .map(post => (        
+          <div class="item">
+            <Post post={post} slug={post.slug} />     
+          </div>
+        ))}       
+    </div>    
+
+    <h3>Especiais</h3> 
+    <div class="grid">
+      {posts
+        .filter(post => post.category === "Especiais")
+        .map(post => (        
+          <div class="item">
+            <Post post={post} slug={post.slug} />     
+          </div>
+        ))}      
+    </div>    
+
+    <h3>Massas</h3> 
+    <div class="grid">
+      {posts
+        .filter(post => post.category === "Massas")
+        .map(post => (        
+          <div class="item">
+            <Post post={post} slug={post.slug} />     
+          </div>
+        ))}      
+    </div>
+
+    <h3>Prática</h3> 
+    <div class="grid">
+      {posts
+        .filter(post => post.category === "Prática")
+        .map(post => (        
+          <div class="item">
+            <Post post={post} slug={post.slug} />     
+          </div>
+        ))}      
+    </div>
+
+    <h3>Sopas</h3> 
+    <div class="grid">
+      {posts
+        .filter(post => post.category === "Sopas")
+        .map(post => (        
+          <div class="item">
+            <Post post={post} slug={post.slug} />     
+          </div>
+        ))}      
+    </div>
+
+    <h3>Vegano</h3> 
+    <div class="grid">
+      {posts
+        .filter(post => post.category === "Vegano")
+        .map(post => (        
+          <div class="item">
+            <Post post={post} slug={post.slug} />     
+          </div>
+        ))}      
+    </div>
+  </div>
 </section>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+</style>
