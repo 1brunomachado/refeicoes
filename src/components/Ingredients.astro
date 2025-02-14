@@ -2,6 +2,7 @@
 const { post } = Astro.props;
 ---
 
-<h3>Ingredientes</h3>
-<p><strong>{post.title}</strong></p>
-<p>{post.ingredients}</p>
+<div>
+  <h3 class="mb-4 text-2xl font-medium text-neutral-700">Ingredientes</h3>
+  <p class="max-w-[520px] text-neutral-600">{post.ingredients}</p>
+</div>

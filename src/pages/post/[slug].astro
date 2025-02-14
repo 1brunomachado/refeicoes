@@ -4,6 +4,7 @@ import Layout from '../../layouts/Layout.astro';
 import Nutrition from '../../components/Nutrition.astro';
 import Ingredients from '../../components/Ingredients.astro';
 import Alert from '../../components/Alert.astro';
+import PostHero from '../../components/PostHero.astro';
 
 export async function getStaticPaths() {
   return posts.map(post => ({
@@ -20,10 +21,15 @@ if (!post) {
 }
 ---
 
-<Layout title={title}>
-  <Nutrition post={post} />
-  <Ingredients post={post} />
-  <Alert note={post.allergic} />
+<Layout title={title}>  
+  <div class="flex justify-between max-w-[1256px] mt-12 m-auto px-5">
+    <div>
+      <Ingredients post={post} />
+      <Alert note={post.allergic} />
+    </div>
+
+    <Nutrition post={post} />
+  </div>
 
   <a href="/">Voltar para o Blog</a>
 </Layout>
