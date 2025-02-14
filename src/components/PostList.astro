@@ -62,10 +62,10 @@ import Post from './Post.astro';
         ))}      
     </div>
 
-    <h3>Vegano</h3> 
+    <h3>Vegana</h3> 
     <div class="grid">
       {posts
-        .filter(post => post.category === "Vegano")
+        .filter(post => post.category === "Vegana")
         .map(post => (        
           <div class="item">
             <Post post={post} slug={post.slug} />     
