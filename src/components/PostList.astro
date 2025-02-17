@@ -1,76 +1,88 @@
 ---
-import { posts } from '../data/data.js';
-import Post from './Post.astro';
+import { posts } from "../data/data.js";
+import Post from "./Post.astro";
 ---
 
 <section>
-  <h1>Refeições</h1> 
+  <h1>Refeições</h1>
 
-  <div class="container">    
+  <div class="container">
     <h3>Dia a dia</h3>
     <div class="grid">
-      {posts
-        .filter(post => post.category === "Dia a dia")
-        .map(post => (        
-          <div class="item">
-            <Post post={post} slug={post.slug} />     
-          </div>
-        ))}       
-    </div>    
-
-    <h3>Especiais</h3> 
-    <div class="grid">
-      {posts
-        .filter(post => post.category === "Especiais")
-        .map(post => (        
-          <div class="item">
-            <Post post={post} slug={post.slug} />     
-          </div>
-        ))}      
-    </div>    
-
-    <h3>Massas</h3> 
-    <div class="grid">
-      {posts
-        .filter(post => post.category === "Massas")
-        .map(post => (        
-          <div class="item">
-            <Post post={post} slug={post.slug} />     
-          </div>
-        ))}      
+      {
+        posts
+          .filter((post) => post.category === "Dia a dia")
+          .map((post) => (
+            <div class="item">
+              <Post post={post} slug={post.slug} />
+            </div>
+          ))
+      }
     </div>
 
-    <h3>Prática</h3> 
+    <h3>Especiais</h3>
     <div class="grid">
-      {posts
-        .filter(post => post.category === "Prática")
-        .map(post => (        
-          <div class="item">
-            <Post post={post} slug={post.slug} />     
-          </div>
-        ))}      
+      {
+        posts
+          .filter((post) => post.category === "Especiais")
+          .map((post) => (
+            <div class="item">
+              <Post post={post} slug={post.slug} />
+            </div>
+          ))
+      }
     </div>
 
-    <h3>Sopas</h3> 
+    <h3>Massas</h3>
     <div class="grid">
-      {posts
-        .filter(post => post.category === "Sopas")
-        .map(post => (        
-          <div class="item">
-            <Post post={post} slug={post.slug} />     
-          </div>
-        ))}      
+      {
+        posts
+          .filter((post) => post.category === "Massas")
+          .map((post) => (
+            <div class="item">
+              <Post post={post} slug={post.slug} />
+            </div>
+          ))
+      }
     </div>
 
-    <h3>Vegana</h3> 
+    <h3>Prática</h3>
     <div class="grid">
-      {posts
-        .filter(post => post.category === "Vegana")
-        .map(post => (        
-          <div class="item">
-            <Post post={post} slug={post.slug} />     
-          </div>
-        ))}      
+      {
+        posts
+          .filter((post) => post.category === "Prática")
+          .map((post) => (
+            <div class="item">
+              <Post post={post} slug={post.slug} />
+            </div>
+          ))
+      }
+    </div>
+
+    <h3>Sopas</h3>
+    <div class="grid">
+      {
+        posts
+          .filter((post) => post.category === "Sopas")
+          .map((post) => (
+            <div class="item">
+              <Post post={post} slug={post.slug} />
+            </div>
+          ))
+      }
+    </div>
+
+    <h3>Vegana</h3>
+    <div class="grid">
+      {
+        posts
+          .filter((post) => post.category === "Vegana")
+          .map((post) => (
+            <div class="item">
+              <Post post={post} slug={post.slug} />
+            </div>
+          ))
+      }
     </div>
   </div>
 </section>

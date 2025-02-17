@@ -1,76 +1,87 @@
 ---
 const { post } = Astro.props;
-const {portion, calories, carbohydrate, sugars, added, protein, fat, saturated, trans, fiber, sodium} = post;
+const {
+  portion,
+  calories,
+  carbohydrate,
+  sugars,
+  added,
+  protein,
+  fat,
+  saturated,
+  trans,
+  fiber,
+  sodium,
+} = post;
 ---
 
 <div class="max-w-[488px] w-full">
-  <h3 class="mb-4 text-2xl font-medium text-neutral-700">Tabela nutricional</h3>
+  <h3 class="mb-4 text-2xl font-medium text-[#003180]">Tabela nutricional</h3>
 
-  <table class="w-full text-base">  
+  <table class="w-full text-base">
     <colgroup>
-      <col class="w-[60%]"> 
-      <col class="w-[25%]"> 
-      <col class="w-[15%]"> 
-  </colgroup>
+      <col class="w-[60%]" />
+      <col class="w-[25%]" />
+      <col class="w-[15%]" />
+    </colgroup>
     <thead>
       <tr class="text-left">
-        <th class="font-medium text-neutral-800">Porção de {portion}</th>
+        <th class="font-medium text-neutral-800">Porção de 100g</th>
         <th class="font-medium text-neutral-800">Total</th>
         <th class="font-medium text-neutral-800">VD*</th>
       </tr>
     </thead>
     <tbody>
       <tr class="text-neutral-600">
-        <td class="py-1">Valor energético (kcal)</th>
+        <td class="py-1">Valor energético (kcal)</td>
         <td class="py-1">{calories.g}</td>
         <td class="py-1">{calories.vd}%</td>
       </tr>
       <tr class="text-neutral-600">
-        <td class="py-1">Carboidratos (g)</th>
+        <td class="py-1">Carboidratos (g)</td>
         <td class="py-1">{carbohydrate.g}</td>
         <td class="py-1">{carbohydrate.vd}%</td>
       </tr>
       <tr class="text-neutral-600">
-        <td class="py-1">Açucares totais (g)</th>
+        <td class="py-1">Açucares totais (g)</td>
         <td class="py-1">{sugars.g}</td>
         <td class="py-1">{sugars.vd}%</td>
       </tr>
       <tr class="text-neutral-600">
-        <td class="py-1">Açucares adicionados (g)</th>
+        <td class="py-1">Açucares adicionados (g)</td>
         <td class="py-1">{added.g}</td>
         <td class="py-1">{added.vd}%</td>
       </tr>
       <tr class="text-neutral-600">
-        <td class="py-1">Proteínas (g)</th>
+        <td class="py-1">Proteínas (g)</td>
         <td class="py-1">{protein.g}</td>
         <td class="py-1">{protein.vd}%</td>
       </tr>
       <tr class="text-neutral-600">
-        <td class="py-1">Gorduras totais (g)</th>
+        <td class="py-1">Gorduras totais (g)</td>
         <td class="py-1">{fat.g}</td>
         <td class="py-1">{fat.vd}%</td>
       </tr>
       <tr class="text-neutral-600">
-        <td class="py-1">Gorduras saturadas (g)</th>
+        <td class="py-1">Gorduras saturadas (g)</td>
         <td class="py-1">{saturated.g}</td>
         <td class="py-1">{saturated.vd}%</td>
       </tr>
       <tr class="text-neutral-600">
-        <td class="py-1">Gorduras trans (g)</th>
+        <td class="py-1">Gorduras trans (g)</td>
         <td class="py-1">{trans.g}</td>
         <td class="py-1">{trans.vd}%</td>
       </tr>
       <tr class="text-neutral-600">
-        <td class="py-1">Fibra alimentar (g)</th>
+        <td class="py-1">Fibra alimentar (g)</td>
         <td class="py-1">{fiber.g}</td>
         <td class="py-1">{fiber.vd}%</td>
       </tr>
       <tr class="text-neutral-600">
-        <td class="py-1">Sódio (mg)</th>
+        <td class="py-1">Sódio (mg)</td>
         <td class="py-1">{sodium.g}</td>
         <td class="py-1">{sodium.vd}%</td>
       </tr>
     </tbody>
   </table>
 </div>
-

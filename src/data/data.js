@@ -6,7 +6,8 @@ export const posts = [
     price: "21,99",
     ingredients:
       "Tomate, carne bovina, cebola, extrato de tomate, alho, sal, óleo de soja, pimenta em pó, salsa, tomilho e manjerona.",
-    allergic: "Alérgicos: Contém derivados de soja. Pode conter leite e ovo. Contém glúten.",
+    allergic:
+      "Alérgicos: Contém derivados de soja. Pode conter leite e ovo. Contém glúten.",
     weight: "497",
     portion: "100",
     calories: { g: "83", vd: "3" },
@@ -25,8 +26,10 @@ export const posts = [
     title: "Bife à Milanesa",
     category: "Dia a dia",
     price: "25,99",
-    ingredients: "Carne bovina, ovo, óleo de soja, farinha de rosca, farinha de trigo, sal e pimenta em pó.",
-    allergic: "Alérgicos: Contém ovo, derivados de trigo e soja. Pode conter leite. Contém glúten.",
+    ingredients:
+      "Carne bovina, ovo, óleo de soja, farinha de rosca, farinha de trigo, sal e pimenta em pó.",
+    allergic:
+      "Alérgicos: Contém ovo, derivados de trigo e soja. Pode conter leite. Contém glúten.",
     weight: "497",
     portion: "100",
     calories: { g: "392", vd: "26" },
@@ -45,8 +48,10 @@ export const posts = [
     title: "Feijão",
     category: "Dia a dia",
     price: "14,99",
-    ingredients: "Água, feijão, cebola, óleo de soja, alho, sal, tomilho, manjerona e louro.",
-    allergic: "Alérgicos: Contém derivados de soja. Pode conter leite e ovo. Contém glúten.",
+    ingredients:
+      "Água, feijão, cebola, óleo de soja, alho, sal, tomilho, manjerona e louro.",
+    allergic:
+      "Alérgicos: Contém derivados de soja. Pode conter leite e ovo. Contém glúten.",
     weight: "587",
     portion: "100",
     calories: { g: "185", vd: "23" },
@@ -65,8 +70,10 @@ export const posts = [
     title: "Frango Xadrez",
     category: "Dia a dia",
     price: "25,99",
-    ingredients: "Filé de frango, pimentão verde, cebola, shoyo, amendoim, água, óleo de soja e amido de milho.",
-    allergic: "Alérgicos: Contém amendoim e derivados de soja. Pode conter leite e ovo. Contém glúten.",
+    ingredients:
+      "Filé de frango, pimentão verde, cebola, shoyo, amendoim, água, óleo de soja e amido de milho.",
+    allergic:
+      "Alérgicos: Contém amendoim e derivados de soja. Pode conter leite e ovo. Contém glúten.",
     weight: "500",
     portion: "100",
     calories: { g: "177", vd: "9" },
@@ -87,7 +94,8 @@ export const posts = [
     price: "21,99",
     ingredients:
       "Tomate, carne de frango, requeijão cremoso, farinha de trigo, cebola, óleo de soja, ovo, extrato de tomate, alho, sal, salsa, tomilho, manjerona e noz moscada.",
-    allergic: "Alérgicos: Contém derivados de trigo e leite, soja e ovo. Contém glúten. Contém lactose.",
+    allergic:
+      "Alérgicos: Contém derivados de trigo e leite, soja e ovo. Contém glúten. Contém lactose.",
     weight: "481",
     portion: "100",
     calories: { g: "188", vd: "9" },
@@ -108,7 +116,8 @@ export const posts = [
     price: "24,99",
     ingredients:
       "Tomate, carne bovina, cebola, extrato de tomate, óleo de soja, alho, sal, pimenta em pó, louro, alecrim, salsa, tomilho e manjerona.",
-    allergic: "Alérgicos: Contém derivados de soja. Pode conter leite e ovo. Contém glúten. Contém lactose.",
+    allergic:
+      "Alérgicos: Contém derivados de soja. Pode conter leite e ovo. Contém glúten. Contém lactose.",
     weight: "481",
     portion: "100",
     calories: { g: "124", vd: "6" },
@@ -129,7 +138,8 @@ export const posts = [
     price: "28,99",
     ingredients:
       "Tomate, carne bovina, presunto, ovo, queijo muçarela, óleo de soja, farinha de rosca, cebola, sal, extrato de tomate, farinha de trigo, alho, manjericão, salsa, orégano, tomilho e manjerona.",
-    allergic: "Alérgicos: Contém derivados de leite, soja e ovo. Contém glúten.",
+    allergic:
+      "Alérgicos: Contém derivados de leite, soja e ovo. Contém glúten.",
     weight: "642",
     portion: "100",
     calories: { g: "231", vd: "12" },
@@ -150,7 +160,8 @@ export const posts = [
     price: "26,99",
     ingredients:
       "Dobradinha fresca, feijão branco, tomate, cebola, linguiça, batata, azeitona, óleo de soja, alho, extrato de tomate, sal, salsa, tomilho e manjerona.",
-    allergic: "Alérgicos: Contém derivados de soja. Pode conter leite e ovo. Contém glúten.",
+    allergic:
+      "Alérgicos: Contém derivados de soja. Pode conter leite e ovo. Contém glúten.",
     weight: "911",
     portion: "100",
     calories: { g: "355", vd: "44" },
@@ -171,7 +182,8 @@ export const posts = [
     price: "27,99",
     ingredients:
       "Filé de frango, creme de leite, molho pomodoro (tomate, cebola, extrato de tomate, óleo de soja, alho, sal, salsa, tomilho e manjerona), milho, requeijão, cebola. Óleo de soja, sal, alho e louro.",
-    allergic: "Alérgicos: Contém derivados de soja e derivados de leite. Pode conter ovo. Contém glúten.",
+    allergic:
+      "Alérgicos: Contém derivados de soja e derivados de leite. Pode conter ovo. Contém glúten.",
     weight: "500",
     portion: "100",
     calories: { g: "331", vd: "17" },
@@ -192,7 +204,8 @@ export const posts = [
     price: "26,99",
     ingredients:
       "Dobradinha fresca, feijão branco, tomate, cebola, linguiça, batata, azeitona, óleo de soja, alho, extrato de tomate, sal, salsa, tomilho e manjerona.",
-    allergic: "Alérgicos: Contém derivados de soja. Pode conter leite e ovo. Contém glúten.",
+    allergic:
+      "Alérgicos: Contém derivados de soja. Pode conter leite e ovo. Contém glúten.",
     weight: "497",
     portion: "100",
     calories: { g: "135", vd: "17" },
@@ -213,7 +226,8 @@ export const posts = [
     price: "20,00",
     ingredients:
       "Almôndegas (tomate, carne bovina, cebola, extrato de tomate, alho, sal, óleo de soja, pimenta em pó, salsa, tomilho e manjerona), legumes sauté (abobrinha, cenoura, couve-flor, brócolis, tomate, azeite de oliva e sal) e arroz (arroz, cebola, sal, alho e louro).",
-    allergic: "Alérgicos: Contém derivados de soja e trigo. Pode conter leite e ovo. Contém glúten.",
+    allergic:
+      "Alérgicos: Contém derivados de soja e trigo. Pode conter leite e ovo. Contém glúten.",
     weight: "500",
     portion: "100",
     calories: { g: "141", vd: "35" },
@@ -234,7 +248,8 @@ export const posts = [
     price: "20,00",
     ingredients:
       "Arroz (arroz, cebola, sal, alho e louro), bife à milanesa (carne bovina, ovo, óleo de soja, farinha de rosca, farinha de trigo, sal e pimenta em pó) e feijão (feijão, cebola, óleo de soja, alho, sal, tomilho, manjerona e louro).",
-    allergic: "Alérgicos: Contém ovo e derivados de trigo e soja. Pode conter leite. Contém glúten.",
+    allergic:
+      "Alérgicos: Contém ovo e derivados de trigo e soja. Pode conter leite. Contém glúten.",
     weight: "500",
     portion: "100",
     calories: { g: "229", vd: "49" },
@@ -255,7 +270,8 @@ export const posts = [
     price: "20,00",
     ingredients:
       "Carne moída (carne bovina, molho pomodoro, cebola, cenoura, milho, ervilha, óleo de soja, sal, salsa e tomilho), feijão (feijão, cebola, óleo de soja, alho, sal, tomilho, manjerona e louro), arroz (arroz, cebola, sal, alho e louro) e moranga (moranga e alho).",
-    allergic: "Alérgicos: Contém derivados de soja. Pode conter leite e ovo. Contém glúten. Contém lactose.",
+    allergic:
+      "Alérgicos: Contém derivados de soja. Pode conter leite e ovo. Contém glúten. Contém lactose.",
     weight: "500",
     portion: "100",
     calories: { g: "133", vd: "33" },
@@ -276,7 +292,8 @@ export const posts = [
     price: "20,00",
     ingredients:
       "Carne moída (carne bovina, molho pomodoro, cebola, cenoura, milho, ervilha, óleo de soja, sal, salsa e tomilho), legumes sauté (abobrinha, cenoura, couve-flor, brócolis, tomate, azeite de oliva e sal) e farofa (farinha de mandioca, cebola, manteiga, alho, óleo de soja e sal).",
-    allergic: "Alérgicos: Contém derivados de leite, soja e trigo. Pode conter ovo. Contém glúten.",
+    allergic:
+      "Alérgicos: Contém derivados de leite, soja e trigo. Pode conter ovo. Contém glúten.",
     weight: "500",
     portion: "100",
     calories: { g: "253", vd: "63" },
@@ -297,7 +314,8 @@ export const posts = [
     price: "20,00",
     ingredients:
       "Frango xadrez (filé de frango, pimentão verde, cebola, shoyo, amendoim, água, óleo de soja e amido de milho), legumes sauté (abobrinha, cenoura, couve-flor, brócolis, tomate, azeite de oliva e sal) e arroz (arroz, cebola, sal, alho e louro).",
-    allergic: "Alérgicos: Contém amendoim, derivados de soja e trigo. Pode conter leite e ovo. Contém glúten.",
+    allergic:
+      "Alérgicos: Contém amendoim, derivados de soja e trigo. Pode conter leite e ovo. Contém glúten.",
     weight: "500",
     portion: "100",
     calories: { g: "159", vd: "40" },
@@ -318,7 +336,8 @@ export const posts = [
     price: "20,00",
     ingredients:
       "Fricassê (filé de frango, creme de leite, molho pomodoro (tomate, cebola, extrato de tomate, óleo de soja, alho, sal, salsa, tomilho e manjerona), milho, requeijão, cebola, óleo de soja, sal, alho e louro), arroz (arroz, cebola, sal, alho e louro) e batata rústica (batata, óleo de soja, sal e alecrim).",
-    allergic: "Alérgicos: Contém derivados de leite e soja. Pode conter ovo. Contém glúten. Contém lactose.",
+    allergic:
+      "Alérgicos: Contém derivados de leite e soja. Pode conter ovo. Contém glúten. Contém lactose.",
     weight: "500",
     portion: "100",
     calories: { g: "223", vd: "56" },
@@ -339,7 +358,8 @@ export const posts = [
     price: "21,99",
     ingredients:
       "Panqueca de frango com requeijão (tomate, carne de frango, requeijão cremoso, farinha de trigo, cebola, óleo de soja, ovo, extrato de tomate, alho, sal, salsa, tomilho, manjerona e noz moscada), legumes sauté (abobrinha, cenoura, couve-flor, brócolis, tomate, azeite de oliva e sal) e arroz integral (arroz integral, cebola, sal, alho, óleo de soja e louro).",
-    allergic: "Alérgicos: Contém derivados de soja e leite. Pode conter ovo. Contém glúten. Contém lactose.",
+    allergic:
+      "Alérgicos: Contém derivados de soja e leite. Pode conter ovo. Contém glúten. Contém lactose.",
     weight: "500",
     portion: "100",
     calories: { g: "139", vd: "35" },
@@ -360,7 +380,8 @@ export const posts = [
     price: "39,99",
     ingredients:
       "Leite, massa de lasanha, queijo muçarela, queijo provolone, queijo colonial, queijo gorgonzola, cebola, farinha de trigo, manteiga sem sal, louro, cravo da índia e noz-moscada.",
-    allergic: "Alérgicos: Contém derivados de leite e trigo. Pode conter ovo. Contém glúten. Contém lactose.",
+    allergic:
+      "Alérgicos: Contém derivados de leite e trigo. Pode conter ovo. Contém glúten. Contém lactose.",
     weight: "657",
     portion: "100",
     calories: { g: "246", vd: "12" },
@@ -381,7 +402,8 @@ export const posts = [
     price: "37,99",
     ingredients:
       "Leite, carne bovina, queijo muçarela, tomate, massa de lasanha, cebola, farinha de trigo, manteiga sem sal, óleo de soja, queijo parmesão, extrato de tomate, alho, sal, salsa, louro, tomilho, manjerona, cravo da índia e noz-moscada.",
-    allergic: "Alérgicos: Contém derivados de soja, leite e trigo. Pode conter ovo. Contém glúten. Contém lactose.",
+    allergic:
+      "Alérgicos: Contém derivados de soja, leite e trigo. Pode conter ovo. Contém glúten. Contém lactose.",
     weight: "832",
     portion: "100",
     calories: { g: "199", vd: "10" },
@@ -400,8 +422,10 @@ export const posts = [
     title: "Creme de Moranga com Gengibre",
     category: "Sopas",
     price: "20,00",
-    ingredients: "Moranga, cebola, alho, óleo de soja, sal, tomilho, manjerona, louro e gengibre.",
-    allergic: "Alérgicos: Contém derivados de soja. Pode conter leite e ovo. Contém glúten.",
+    ingredients:
+      "Moranga, cebola, alho, óleo de soja, sal, tomilho, manjerona, louro e gengibre.",
+    allergic:
+      "Alérgicos: Contém derivados de soja. Pode conter leite e ovo. Contém glúten.",
     weight: "825",
     portion: "100",
     calories: { g: "38", vd: "5" },
@@ -441,7 +465,8 @@ export const posts = [
     title: "Legumes Sauté",
     category: "Vegana",
     price: "16,99",
-    ingredients: "Abobrinha, cenoura, couve-flor, brócolis, tomate, azeite de oliva e sal.",
+    ingredients:
+      "Abobrinha, cenoura, couve-flor, brócolis, tomate, azeite de oliva e sal.",
     allergic: "Alérgicos: Pode conter leite e ovo. Contém glúten.",
     weight: "373",
     portion: "100",

@@ -1,31 +1,46 @@
 ---
-import { posts } from '../../data/data.js';
-import Layout from '../../layouts/Layout.astro';
-import Nutrition from '../../components/Nutrition.astro';
-import Ingredients from '../../components/Ingredients.astro';
-import Alert from '../../components/Alert.astro';
-import PostHero from '../../components/PostHero.astro';
+import { posts } from "../../data/data.js";
+import Layout from "../../layouts/Layout.astro";
+import Nutrition from "../../components/Nutrition.astro";
+import Information from "../../components/Information.astro";
+import PostHero from "../../components/PostHero.astro";
+import Alert from "../../components/Alert.astro";
 
 export async function getStaticPaths() {
-  return posts.map(post => ({
+  return posts.map((post) => ({
     params: { slug: post.slug },
   }));
 }
 
 const { slug } = Astro.params;
-const post = posts.find(p => p.slug === slug);
-const title = `Refeições Congeladas - ${post?.title}`
+const post = posts.find((p) => p.slug === slug);
+const title = `Refeições Congeladas - ${post?.title}`;
 
 if (!post) {
-  throw new Error('Post não encontrado');
+  throw new Error("Post não encontrado");
 }
 ---
 
-<Layout title={title}>  
-  <div class="flex justify-between max-w-[1256px] mt-12 m-auto px-5">
+<Layout title={title}>
+  <PostHero post={post} />
+
+  <div
+    class="max-w-[1256px] m-auto px-5 flex justify-between flex-wrap gap-8 mt-12"
+  >
     <div>
-      <Ingredients post={post} />
+      <h3 class="text-2xl font-medium text-[#003180]">Ingredientes</h3>
+      <Information content={post.ingredients} />
       <Alert note={post.allergic} />
+
+      <h3 class="mt-8 text-2xl font-medium text-[#003180]">Conservação</h3>
+      <Information
+        content={`O prazo de validade varia segundo a temperatura de conservação. Mantenha congelado à temperatura igual ou inferior a -18ºC (freezer). Depois de descongelado, manter em temperatura de até 5ºC (refrigerador) e consumir em até 3 dias. Descongelar somente no forno ou refrigeração.`}
+      />
+
+      <h3 class="mt-8 text-2xl font-medium text-[#003180]">Preparo</h3>
+      <Information
+        content={"Leve o alimento ainda congelado, na embalagem original sem a tampa, ao forno preaquecido à temperatura de 180ºC por aproximadamente 12 minutos e estará pronto para servir."}
+      />
     </div>
 
     <Nutrition post={post} />
@@ -33,5 +48,3 @@ if (!post) {
 
   <a href="/">Voltar para o Blog</a>
 </Layout>
-    
- 
