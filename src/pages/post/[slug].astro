@@ -22,7 +22,11 @@ if (!post) {
 ---
 
 <Layout title={title}>
-  <PostHero post={post} />
+  <PostHero
+    post={post}
+    imagePath=`../images/${slug}.jpg`
+    altText={post.title}
+  />
 
   <div
     class="max-w-[1256px] m-auto px-5 flex justify-between flex-wrap gap-8 mt-12"
