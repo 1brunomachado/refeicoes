@@ -3,9 +3,10 @@ import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 import icon from "../images/pattern.png";
 
-const { post, imagePath, altText } = Astro.props;
-const { title, price, weight } = post;
+const { title, slug, price, weight } = Astro.props.post;
 
+const imagePath = `../images/${slug}.jpg`;
+const altText = title;
 const images = import.meta.glob<{ default: ImageMetadata }>(
   "../images/*.{jpeg,jpg,png,gif}",
 );

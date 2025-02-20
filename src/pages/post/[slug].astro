@@ -1,9 +1,9 @@
 ---
 import { posts } from "../../data/data.js";
 import Layout from "../../layouts/Layout.astro";
+import PostHero from "../../components/PostHero.astro";
 import Nutrition from "../../components/Nutrition.astro";
 import Information from "../../components/Information.astro";
-import PostHero from "../../components/PostHero.astro";
 import Alert from "../../components/Alert.astro";
 
 export async function getStaticPaths() {
@@ -22,28 +22,25 @@ if (!post) {
 ---
 
 <Layout title={title}>
-  <PostHero
-    post={post}
-    imagePath=`../images/${slug}.jpg`
-    altText={post.title}
-  />
+  <PostHero post={post} />
 
   <div
     class="max-w-[1256px] m-auto px-5 flex justify-between flex-wrap gap-8 mt-12"
   >
-    <div>
-      <h3 class="text-2xl font-medium text-[#003180]">Ingredientes</h3>
-      <Information content={post.ingredients} />
-      <Alert note={post.allergic} />
+    <div class="grid gap-8">
+      <div class="grid gap-6">
+        <Information title="Ingredientes" content={post.ingredients} />
+        <Alert note={post.allergic} />
+      </div>
 
-      <h3 class="mt-8 text-2xl font-medium text-[#003180]">Conservação</h3>
       <Information
-        content={`O prazo de validade varia segundo a temperatura de conservação. Mantenha congelado à temperatura igual ou inferior a -18ºC (freezer). Depois de descongelado, manter em temperatura de até 5ºC (refrigerador) e consumir em até 3 dias. Descongelar somente no forno ou refrigeração.`}
+        title="Conservação"
+        content="O prazo de validade varia segundo a temperatura de conservação. Mantenha congelado à temperatura igual ou inferior a -18ºC (freezer). Depois de descongelado, manter em temperatura de até 5ºC (refrigerador) e consumir em até 3 dias. Descongelar somente no forno ou refrigeração."
       />
 
-      <h3 class="mt-8 text-2xl font-medium text-[#003180]">Preparo</h3>
       <Information
-        content={"Leve o alimento ainda congelado, na embalagem original sem a tampa, ao forno preaquecido à temperatura de 180ºC por aproximadamente 12 minutos e estará pronto para servir."}
+        title="Preparo"
+        content="Leve o alimento ainda congelado, na embalagem original sem a tampa, ao forno preaquecido à temperatura de 180ºC por aproximadamente 12 minutos e estará pronto para servir."
       />
     </div>
 

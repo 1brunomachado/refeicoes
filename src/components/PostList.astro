@@ -14,7 +14,7 @@ import Post from "./Post.astro";
           .filter((post) => post.category === "Dia a dia")
           .map((post) => (
             <div class="item">
-              <Post post={post} slug={post.slug} />
+              <Post post={post} />
             </div>
           ))
       }
@@ -27,7 +27,7 @@ import Post from "./Post.astro";
           .filter((post) => post.category === "Especiais")
           .map((post) => (
             <div class="item">
-              <Post post={post} slug={post.slug} />
+              <Post post={post} />
             </div>
           ))
       }
@@ -40,7 +40,7 @@ import Post from "./Post.astro";
           .filter((post) => post.category === "Massas")
           .map((post) => (
             <div class="item">
-              <Post post={post} slug={post.slug} />
+              <Post post={post} />
             </div>
           ))
       }
@@ -53,7 +53,7 @@ import Post from "./Post.astro";
           .filter((post) => post.category === "Prática")
           .map((post) => (
             <div class="item">
-              <Post post={post} slug={post.slug} />
+              <Post post={post} />
             </div>
           ))
       }
@@ -66,7 +66,7 @@ import Post from "./Post.astro";
           .filter((post) => post.category === "Sopas")
           .map((post) => (
             <div class="item">
-              <Post post={post} slug={post.slug} />
+              <Post post={post} />
             </div>
           ))
       }
@@ -79,7 +79,7 @@ import Post from "./Post.astro";
           .filter((post) => post.category === "Vegana")
           .map((post) => (
             <div class="item">
-              <Post post={post} slug={post.slug} />
+              <Post post={post} />
             </div>
           ))
       }
