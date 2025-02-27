@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+import pattern from "../images/pattern.png";
+
+const { title, content } = Astro.props;
+---
+
+<div>
+  <Image
+    src={pattern}
+    alt="Ícone Refeições Congeladas"
+    width={40}
+    height={40}
+  />
+  <h2>{title}</h2>
+  <p>{content}</p>
+</div>

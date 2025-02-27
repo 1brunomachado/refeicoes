@@ -1,0 +1,50 @@
+---
+import Card from "./Card.astro";
+import { data } from "../data";
+
+const { category } = Astro.props;
+const posts = data.filter((data) => data.category === category);
+---
+
+<div id={category.toLowerCase()}>
+  <h3>{category}</h3>
+
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      {
+        posts.map((post) => (
+          <div class="swiper-slide">
+            <Card
+              slug={post.slug}
+              title={post.title}
+              price={post.price}
+              weight={post.weight}
+            />
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<script>
+  import Swiper from "swiper/bundle";
+  import "swiper/css/bundle";
+
+  const swiper = new Swiper(".swiper", {
+    breakpoints: {
+      640: {
+        slidesPerView: 2.25,
+      },
+      1024: {
+        slidesPerView: 3.25,
+      },
+    },
+    loop: false,
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
+    slidesPerView: 1.25,
+    spaceBetween: 32,
+  });
+</script>

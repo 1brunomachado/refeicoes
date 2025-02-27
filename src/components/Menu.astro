@@ -1,0 +1,54 @@
+---
+import Anchor from "./Anchor.astro";
+---
+
+<div class="swiper-menu">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <Anchor id="Dia a dia" />
+    </div>
+
+    <div class="swiper-slide">
+      <Anchor id="Especiais" />
+    </div>
+
+    <div class="swiper-slide">
+      <Anchor id="Massas" />
+    </div>
+
+    <div class="swiper-slide">
+      <Anchor id="Prática" />
+    </div>
+
+    <div class="swiper-slide">
+      <Anchor id="Sopas" />
+    </div>
+
+    <div class="swiper-slide">
+      <Anchor id="Vegana" />
+    </div>
+  </div>
+</div>
+
+<script>
+  import Swiper from "swiper/bundle";
+  import "swiper/css/bundle";
+
+  const swiper = new Swiper(".swiper-menu", {
+    breakpoints: {
+      640: {
+        slidesPerView: 4.5,
+      },
+      1024: {
+        slidesPerView: 6,
+      },
+    },
+    freeMode: true,
+    loop: false,
+    scrollbar: {
+      el: ".swiper-scrollbar",
+    },
+    slidesPerView: 2.5,
+    spaceBetween: 32,
+  });
+</script>

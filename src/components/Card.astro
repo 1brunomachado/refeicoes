@@ -1,0 +1,20 @@
+---
+import Images from "./Images.astro";
+
+const { slug, title, price, weight } = Astro.props;
+---
+
+<article>
+  <a href={`./post/${slug}`}>
+    <Images src={slug} alt={title} />
+
+    <div>
+      <div>
+        <h3>{title}</h3>
+        <p>{weight}g</p>
+      </div>
+
+      <p>R$ {price}</p>
+    </div>
+  </a>
+</article>
