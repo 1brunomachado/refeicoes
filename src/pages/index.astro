@@ -1,10 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import PostList from "../components/PostList.astro";
-
+import Section from "../components/Section.astro";
+import SlideCards from "../components/SlideCards.astro";
 const title = "Refeições Congeladas";
 ---
 
 <Layout title={title}>
-  <PostList />
+  <Section
+    title="Conheça nosso cardápio"
+    content="A linha de refeições congeladas do Sesc/RS foi criada pensando em tornar preparações caseiras e saborosas acessíveis às famílias gaúchas. Nossas refeições são elaboradas com insumos frescos e naturais, além de todo cuidado e segurança no preparo."
+  />
+  <SlideCards category="Dia a dia" />
+  <SlideCards category="Especiais" />
+  <SlideCards category="Massas" />
+  <SlideCards category="Prática" />
+  <SlideCards category="Sopas" />
+  <SlideCards category="Vegana" />
 </Layout>

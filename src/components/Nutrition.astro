@@ -10,48 +10,89 @@ const {
   trans,
   fiber,
   sodium,
-} = Astro.props.post;
+} = Astro.props.values;
 
-const nutritionalData = [
-  { label: "Valor energético (kcal)", value: calories.g, vd: calories.vd },
-  { label: "Carboidratos (g)", value: carbohydrate.g, vd: carbohydrate.vd },
-  { label: "Açucares totais (g)", value: sugars.g, vd: sugars.vd },
-  { label: "Açucares adicionados (g)", value: added.g, vd: added.vd },
-  { label: "Proteínas (g)", value: protein.g, vd: protein.vd },
-  { label: "Gorduras totais (g)", value: fat.g, vd: fat.vd },
-  { label: "Gorduras saturadas (g)", value: saturated.g, vd: saturated.vd },
-  { label: "Gorduras trans (g)", value: trans.g, vd: trans.vd },
-  { label: "Fibra alimentar (g)", value: fiber.g, vd: fiber.vd },
-  { label: "Sódio (mg)", value: sodium.g, vd: sodium.vd },
+const content = [
+  { label: "VALOR ENERGÉTICO (kcal)", g: calories.g, vd: calories.vd },
+  { label: "CARBOIDRATOS(g)", g: carbohydrate.g, vd: carbohydrate.vd },
+  { label: "AÇUCARES TOTAIS (g)", g: sugars.g, vd: sugars.vd },
+  { label: "AÇUCARES ADICIONADOS (g)", g: added.g, vd: added.vd },
+  { label: "PROTEÍNAS (g)", g: protein.g, vd: protein.vd },
+  { label: "GORDURAS TOTAIS (g)", g: fat.g, vd: fat.vd },
+  { label: "GORDURAS SATURADAS (g)", g: saturated.g, vd: saturated.vd },
+  { label: "GORDURAS TRANS (g)", g: trans.g, vd: trans.vd },
+  { label: "FIBRA ALIMENTAR (g)", g: fiber.g, vd: fiber.vd },
+  { label: "SÓDIO (mg)", g: sodium.g, vd: sodium.vd },
 ];
 ---
 
-<div class="grid gap-4 max-w-[488px] w-full h-fit">
-  <h3 class="text-2xl font-medium text-[#003180]">Tabela nutricional</h3>
+<div>
+  <h3>Tabela nutricional</h3>
 
-  <table class="w-full text-base">
+  <table>
     <colgroup>
-      <col class="w-[60%]" />
-      <col class="w-[25%]" />
-      <col class="w-[15%]" />
+      <col />
+      <col />
+      <col />
     </colgroup>
+
     <thead>
-      <tr class="text-left">
-        <th class="font-medium text-neutral-800">Porção de 100g</th>
-        <th class="font-medium text-neutral-800">Total</th>
-        <th class="font-medium text-neutral-800">VD*</th>
+      <tr>
+        <th>Porção de 100g</th>
+        <th>Total</th>
+        <th>VD*</th>
       </tr>
     </thead>
+
     <tbody>
       {
-        nutritionalData.map((item) => (
-          <tr class="text-neutral-600">
-            <td class="py-1">{item.label}</td>
-            <td class="py-1">{item.value}</td>
-            <td class="py-1">{item.vd}%</td>
+        content.map((item) => (
+          <tr>
+            <td>{item.label}</td>
+            <td>{item.g}</td>
+            <td>{item.vd ? `${item.vd}%` : ""}</td>
           </tr>
         ))
       }
     </tbody>
+
+    <tfoot>
+      <tr>
+        <td>*Percentual de valores diários fornecidos pela porção.</td>
+      </tr>
+    </tfoot>
   </table>
 </div>
+
+<style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th {
+    padding-block: 16px;
+    font-weight: 500;
+    text-align: left;
+    color: #343a40;
+  }
+
+  tr {
+    font-size: 14px;
+    color: #495057;
+    border-top: 1px solid #d9d9d9;
+  }
+
+  td {
+    padding-block: 14px;
+  }
+
+  tbody td:first-child {
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  tfoot td {
+    font-size: 12px;
+  }
+</style>
