@@ -6,11 +6,11 @@ import pattern from "../images/pattern.png";
 const { slug, title, price, weight } = Astro.props;
 ---
 
-<div>
-  <div>
+<div class="product">
+  <div class="wrapper grid" data-fit>
     <Images src={slug} alt={title} />
 
-    <div>
+    <div class="flow product-info">
       <Image
         src={pattern}
         alt="Ícone Refeições Congeladas"
@@ -18,12 +18,14 @@ const { slug, title, price, weight } = Astro.props;
         height={32}
       />
 
-      <h2>
+      <h2 class="product-title">
         {title}
       </h2>
 
-      <p>R$ {price}</p>
-      <p>{weight}g</p>
+      <div>
+        <p class="product-price">R$ {price}</p>
+        <p class="product-weight">{weight}g</p>
+      </div>
     </div>
   </div>
 </div>

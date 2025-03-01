@@ -1,0 +1,29 @@
+.product {
+  padding-block: 48px;
+  background-color: #f2f4f8;
+}
+
+.product img {
+  border-radius: 4px;
+}
+
+.product-info {
+  --flow-space: 16px;
+  align-self: center;
+}
+
+.product-title {
+  font-size: clamp(1.5rem, 1.1523rem + 1.3245vw, 2rem);
+  font-weight: 500;
+  color: #003180;
+}
+
+.product-price {
+  font-weight: 500;
+  color: #e50040;
+}
+
+.product-weight {
+  font-size: 14px;
+  color: #868e96;
+}

@@ -1,2 +1,3 @@
 @import-glob 'css/global/*.css';
 @import-glob 'css/composition/*.css';
+@import-glob 'css/block/*.css';

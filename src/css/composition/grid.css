@@ -1,0 +1,12 @@
+.grid {
+  display: grid;
+  grid-template-columns: var(--grid-template);
+  gap: var(--gutter);
+  justify-content: var(--grid-justify);
+}
+
+@media (width <= 768px) {
+  .grid[data-fit] {
+    grid-template-columns: 1fr;
+  }
+}

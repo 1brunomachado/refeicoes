@@ -1,0 +1,10 @@
+.post {
+  --grid-template: minmax(300px, 592px) minmax(300px, 488px);
+  --gutter: clamp(2rem, 1.3046rem + 2.649vw, 3rem);
+  --grid-justify: space-between;
+  --flow-space: clamp(2rem, 1.3046rem + 2.649vw, 3rem);
+}
+
+.post-info {
+  padding-top: 48px;
+}

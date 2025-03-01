@@ -21,16 +21,30 @@ if (!post) {
 ---
 
 <Layout title={title}>
-  <Product
-    slug={post.slug}
-    title={post.title}
-    price={post.price}
-    weight={post.weight}
-  />
+  <div class="post">
+    <Product
+      slug={post.slug}
+      title={post.title}
+      price={post.price}
+      weight={post.weight}
+    />
 
-  <Information title="Ingredientes" content={post.ingredients} />
-  <Information title="Conservação" content={post.conservation} />
-  <Information title="Preparação" content={post.preparation} />
+    <div class="wrapper grid post-info" data-fit>
+      <div class="flow">
+        <div>
+          <Information title="Ingredientes" content={post.ingredients} />
+        </div>
+        <div>
+          <Information title="Conservação" content={post.conservation} />
+        </div>
+        <div>
+          <Information title="Preparação" content={post.preparation} />
+        </div>
+      </div>
 
-  <Nutrition values={post} />
+      <div>
+        <Nutrition values={post} />
+      </div>
+    </div>
+  </div>
 </Layout>
