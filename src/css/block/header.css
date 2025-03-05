@@ -1,0 +1,12 @@
+.header {
+  --gutter: 16px;
+  padding-block: 16px;
+}
+
+.header-logo {
+  max-width: 62px;
+}
+
+.header a {
+  color: #003180;
+}

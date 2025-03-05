@@ -1,0 +1,32 @@
+.card {
+  --flow-space: 8px;
+  --repel-vertical-alignment: flex-start;
+  overflow: hidden;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow:
+    0 0 0 1px rgba(13, 63, 126, 0.05),
+    0 1px 1px -0.5px rgba(42, 51, 69, 0.05),
+    0 1px 3px -1.5px rgba(42, 51, 70, 0.05),
+    0 3px 6px -3px rgba(42, 51, 70, 0.05);
+}
+
+.card-info {
+  padding: 16px 20px;
+}
+
+.card-title {
+  width: clamp(11.5625rem, 2.2185rem + 35.596vw, 25rem);
+  text-transform: none;
+}
+
+.card-price {
+  font-size: 14px;
+  font-weight: 500;
+  color: #e50040;
+}
+
+.card-weight {
+  font-size: 14px;
+  color: #868e96;
+}

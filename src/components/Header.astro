@@ -1,31 +1,21 @@
 ---
+import "../css/block/header.css";
 import { Image } from "astro:assets";
 import logo from "../images/logo.png";
 ---
 
-<header>
+<header class="header">
   <div class="wrapper repel">
-    <div>
-      <Image src={logo} alt="Logo Sesc-RS" />
-    </div>
+    <a href="">
+      <img class="header-logo" src={logo.src} alt="Sesc/RS" />
+    </a>
 
     <nav>
       <ul class="repel">
-        <li><a href="/">Refeições</a></li>
+        <li><a href="/#refeicoes">Refeições</a></li>
         <li><a href="#sobre">Comprar</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
   </div>
 </header>
-
-<style>
-  header {
-    --gutter: 24px;
-    padding-block: 20px;
-  }
-
-  a {
-    color: #003180;
-  }
-</style>

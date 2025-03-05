@@ -1,0 +1,29 @@
+.slide {
+  --flow-space: 24px;
+}
+
+.slide-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.swiper {
+  padding: 1px !important;
+}
+
+.slide-header .swiper-pagination {
+  position: relative;
+  width: auto !important;
+}
+
+.slide-header .swiper-pagination-bullet {
+  background: #d3d3d3;
+  transition: all 0.3s;
+}
+
+.slide-header .swiper-pagination-bullet-active {
+  width: 20px;
+  background: #c3c4c6;
+  border-radius: 50px;
+}

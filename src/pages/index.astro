@@ -2,18 +2,30 @@
 import Layout from "../layouts/Layout.astro";
 import Section from "../components/Section.astro";
 import SlideCards from "../components/SlideCards.astro";
+import Hero from "../components/Hero.astro";
 const title = "Refeições Congeladas";
 ---
 
 <Layout title={title}>
-  <Section
-    title="Conheça nosso cardápio"
-    content="A linha de refeições congeladas do Sesc/RS foi criada pensando em tornar preparações caseiras e saborosas acessíveis às famílias gaúchas. Nossas refeições são elaboradas com insumos frescos e naturais, além de todo cuidado e segurança no preparo."
-  />
-  <SlideCards category="Dia a dia" />
-  <SlideCards category="Especiais" />
-  <SlideCards category="Massas" />
-  <SlideCards category="Prática" />
-  <SlideCards category="Sopas" />
-  <SlideCards category="Vegana" />
+  <Hero />
+  <main class="wrapper flow main">
+    <section id="refeicoes">
+      <Section
+        title="Conheça nosso cardápio"
+        content="A linha de refeições congeladas do Sesc/RS foi criada pensando em tornar preparações caseiras e saborosas acessíveis às famílias gaúchas. Nossas refeições são elaboradas com insumos frescos e naturais, além de todo cuidado e segurança no preparo."
+      />
+    </section>
+    <section><SlideCards category="Dia a dia" /></section>
+    <section><SlideCards category="Especiais" /></section>
+    <section><SlideCards category="Massas" /></section>
+    <section><SlideCards category="Prática" /></section>
+    <section><SlideCards category="Sopas" /></section>
+    <section><SlideCards category="Vegana" /></section>
+    <section id="refeicoes">
+      <Section
+        title="Onde encontrar"
+        content="As refeições congeladas do Sesc/RS estão disponíveis para você em diferentes pontos de venda. Aproveite a praticidade e sabor das opções congeladas, que podem ser adquiridas nas unidades abaixo."
+      />
+    </section>
+  </main>
 </Layout>

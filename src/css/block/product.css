@@ -3,8 +3,8 @@
   background-color: #f2f4f8;
 }
 
-.product img {
-  border-radius: 4px;
+.product img:not([class]) {
+  border-radius: 10px;
 }
 
 .product-info {
@@ -13,9 +13,7 @@
 }
 
 .product-title {
-  font-size: clamp(1.5rem, 1.1523rem + 1.3245vw, 2rem);
-  font-weight: 500;
-  color: #003180;
+  --color-title: #003180;
 }
 
 .product-price {

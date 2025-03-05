@@ -6,14 +6,17 @@ const { category } = Astro.props;
 const posts = data.filter((data) => data.category === category);
 ---
 
-<div id={category.toLowerCase()}>
-  <h3>{category}</h3>
+<div id={category.toLowerCase()} class="slide">
+  <div class="flow swiper">
+    <div class="slide-header">
+      <h3>{category}</h3>
+      <div class="swiper-pagination"></div>
+    </div>
 
-  <div class="swiper">
     <div class="swiper-wrapper">
       {
         posts.map((post) => (
-          <div class="swiper-slide">
+          <div class="swiper-slide" style="height: auto;">
             <Card
               slug={post.slug}
               title={post.title}
@@ -28,19 +31,22 @@ const posts = data.filter((data) => data.category === category);
 </div>
 
 <script>
-  import Swiper from "swiper/bundle";
-  import "swiper/css/bundle";
+  import Swiper from "swiper";
+  import { Pagination } from "swiper/modules";
+  import "swiper/css";
+  import "swiper/css/pagination";
 
   const swiper = new Swiper(".swiper", {
     breakpoints: {
       640: {
         slidesPerView: 2.25,
       },
-      1024: {
-        slidesPerView: 3.25,
-      },
     },
     loop: false,
+    modules: [Pagination],
+    pagination: {
+      el: ".swiper-pagination",
+    },
     scrollbar: {
       el: ".swiper-scrollbar",
     },

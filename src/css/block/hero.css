@@ -1,0 +1,15 @@
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 490px;
+  background-image: url(../../images/banner.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
