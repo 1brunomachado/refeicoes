@@ -1,4 +1,5 @@
 ---
+import "../css/block/slide.css";
 import Card from "./Card.astro";
 import { data } from "../data";
 
@@ -8,7 +9,7 @@ const posts = data.filter((data) => data.category === category);
 
 <div id={category.toLowerCase()} class="slide">
   <div class="flow swiper">
-    <div class="slide-header">
+    <div class="repel slide-header">
       <h3>{category}</h3>
       <div class="swiper-pagination"></div>
     </div>
@@ -40,6 +41,9 @@ const posts = data.filter((data) => data.category === category);
     breakpoints: {
       640: {
         slidesPerView: 2.25,
+      },
+      1024: {
+        slidesPerView: 3.25,
       },
     },
     loop: false,

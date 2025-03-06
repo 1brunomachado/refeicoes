@@ -2,18 +2,13 @@
   --flow-space: 24px;
 }
 
-.slide-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .swiper {
   padding: 1px !important;
 }
 
 .slide-header .swiper-pagination {
   position: relative;
+  bottom: auto !important;
   width: auto !important;
 }
 

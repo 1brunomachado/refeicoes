@@ -1,8 +1,10 @@
 ---
+import "../../css/block/post.css";
 import { data } from "../../data";
 import Layout from "../../layouts/Layout.astro";
 import Product from "../../components/Product.astro";
 import Information from "../../components/Information.astro";
+import Alert from "../../components/Alert.astro";
 import Nutrition from "../../components/Nutrition.astro";
 
 export async function getStaticPaths() {
@@ -13,7 +15,7 @@ export async function getStaticPaths() {
 
 const { slug } = Astro.params;
 const post = data.find((p) => p.slug === slug);
-const title = `Refeições Congeladas - ${post?.title}`;
+const title = `Refeições Congeladas - ${post?.title} - Sesc/RS`;
 
 if (!post) {
   throw new Error("Post não encontrado");
@@ -21,7 +23,7 @@ if (!post) {
 ---
 
 <Layout title={title}>
-  <div class="post">
+  <main class="post">
     <Product
       slug={post.slug}
       title={post.title}
@@ -31,8 +33,9 @@ if (!post) {
 
     <div class="wrapper grid post-info" data-fit>
       <div class="flow">
-        <div>
+        <div class="flow">
           <Information title="Ingredientes" content={post.ingredients} />
+          <Alert note={post.allergic} />
         </div>
         <div>
           <Information title="Conservação" content={post.conservation} />
@@ -46,5 +49,5 @@ if (!post) {
         <Nutrition values={post} />
       </div>
     </div>
-  </div>
+  </main>
 </Layout>

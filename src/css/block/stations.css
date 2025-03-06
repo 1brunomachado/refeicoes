@@ -1,0 +1,5 @@
+.stations {
+  --grid-template: repeat(auto-fit, minmax(300px, 1fr));
+  --gutter: 32px;
+  --flow-space: 48px;
+}

@@ -1,0 +1,14 @@
+---
+import "../css/block/unit.css";
+import Images from "./Images.astro";
+
+const { unit, slug } = Astro.props;
+---
+
+<article class="unit">
+  <a href={`https://www.sesc-rs.com.br/${slug}/`}>
+    <Images src={slug} alt={unit} />
+
+    <h3 class="unit-title">{unit}</h3>
+  </a>
+</article>

@@ -1,0 +1,22 @@
+---
+import "../css/block/main.css";
+import Layout from "../layouts/Layout.astro";
+import Section from "../components/Section.astro";
+import Stations from "../components/Stations.astro";
+
+const title = "Refeições Congeladas - Onde encontrar - Sesc/RS";
+---
+
+<Layout title={title}>
+  <main class="wrapper flow main">
+    <section>
+      <Section
+        title="Onde encontrar"
+        content="As refeições congeladas do Sesc/RS estão disponíveis para você em diferentes pontos de venda. Aproveite a praticidade e sabor das opções congeladas, que podem ser adquiridas nas unidades abaixo."
+      />
+    </section>
+    <section>
+      <Stations />
+    </section>
+  </main>
+</Layout>

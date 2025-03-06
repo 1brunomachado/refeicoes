@@ -1,6 +1,7 @@
 .card {
   --flow-space: 8px;
   --repel-vertical-alignment: flex-start;
+  --gutter: 8px;
   overflow: hidden;
   height: 100%;
   border-radius: 10px;
@@ -11,12 +12,22 @@
     0 3px 6px -3px rgba(42, 51, 70, 0.05);
 }
 
+.card a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   padding: 16px 20px;
 }
 
 .card-title {
-  width: clamp(11.5625rem, 2.2185rem + 35.596vw, 25rem);
+  font-weight: 500;
   text-transform: none;
 }
 

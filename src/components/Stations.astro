@@ -1,0 +1,39 @@
+---
+import "../css/block/stations.css";
+import Unit from "./Unit.astro";
+
+const stations = [
+  {
+    unit: "Sesc 4º Distrito",
+    slug: "4distrito",
+  },
+  {
+    unit: "Sesc Alberto Bins",
+    slug: "albertobins",
+  },
+  {
+    unit: "Sesc Anchieta",
+    slug: "anchieta",
+  },
+  {
+    unit: "Sesc Caxias do Sul",
+    slug: "caxias_do_sul",
+  },
+  {
+    unit: "Sesc Centro Histórico",
+    slug: "centro_historico",
+  },
+  {
+    unit: "Sesc Gravataí",
+    slug: "gravatai",
+  },
+  {
+    unit: "Sesc Protásio Alves",
+    slug: "protasioalves",
+  },
+];
+---
+
+<div class="grid stations">
+  {stations.map((station) => <Unit unit={station.unit} slug={station.slug} />)}
+</div>

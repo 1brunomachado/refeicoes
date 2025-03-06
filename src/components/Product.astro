@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import "../css/block/product.css";
 import Images from "./Images.astro";
 import pattern from "../images/pattern.png";
 
@@ -27,6 +27,13 @@ const { slug, title, price, weight } = Astro.props;
         <p class="product-price">R$ {price}</p>
         <p class="product-weight">{weight}g</p>
       </div>
+
+      <a
+        class="product-buy"
+        href="https://www.sesc-rs.com.br/hs/refeicoescongeladas/comprar/"
+      >
+        Onde comprar
+      </a>
     </div>
   </div>
 </div>

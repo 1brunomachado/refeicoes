@@ -13,7 +13,7 @@
 }
 
 .product-title {
-  --color-title: #003180;
+  --color-title: #034668;
 }
 
 .product-price {
@@ -24,4 +24,10 @@
 .product-weight {
   font-size: 14px;
   color: #868e96;
+}
+
+.product a {
+  display: inline-block;
+  font-weight: 500;
+  color: #034668;
 }

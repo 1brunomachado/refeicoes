@@ -1,4 +1,3 @@
 .main {
   --flow-space: clamp(2rem, 1.3046rem + 2.649vw, 3rem);
-  padding-top: 48px;
 }

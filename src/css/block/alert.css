@@ -1,0 +1,18 @@
+.alert {
+  --gutter: 8px;
+  --flow-space: 16px;
+  justify-content: flex-start;
+  max-width: 400px;
+  padding: 16px;
+  background: #e6ebf3;
+  border-radius: 10px;
+}
+
+.alert-icon {
+  display: flex;
+}
+
+.alert p {
+  font-size: 14px;
+  color: #003180;
+}

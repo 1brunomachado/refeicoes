@@ -1,21 +1,44 @@
 ---
 import "../css/block/header.css";
-import { Image } from "astro:assets";
 import logo from "../images/logo.png";
 ---
 
 <header class="header">
   <div class="wrapper repel">
-    <a href="">
+    <a href="https://www.sesc-rs.com.br/">
       <img class="header-logo" src={logo.src} alt="Sesc/RS" />
     </a>
 
-    <nav>
-      <ul class="repel">
-        <li><a href="/#refeicoes">Refeições</a></li>
-        <li><a href="#sobre">Comprar</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
+    <button class="menu-toggle" aria-label="Menu">☰</button>
+
+    <nav class="repel menu">
+      <button class="menu-close" aria-label="Fechar Menu">×</button>
+
+      <a href="https://www.sesc-rs.com.br/hs/refeicoescongeladas/#refeicoes">
+        Refeições
+      </a>
+      <a href="https://www.sesc-rs.com.br/hs/refeicoescongeladas/comprar/">
+        Comprar
+      </a>
+      <a href="https://www.sesc-rs.com.br/saude/restaurantes-e-cafes/">
+        Contato
+      </a>
     </nav>
   </div>
 </header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu");
+    const menuClose = document.querySelector(".menu-close");
+
+    menuToggle.addEventListener("click", function () {
+      menu.classList.toggle("active");
+    });
+
+    menuClose.addEventListener("click", function () {
+      menu.classList.remove("active");
+    });
+  });
+</script>

@@ -1,4 +1,5 @@
 ---
+import "../css/block/card.css";
 import Images from "./Images.astro";
 
 const { slug, title, price, weight } = Astro.props;
@@ -9,7 +10,7 @@ const { slug, title, price, weight } = Astro.props;
     <Images src={slug} alt={title} />
 
     <div class="flow card-info">
-      <div class="repel">
+      <div class="repel" data-nowrap>
         <h3 class="card-title">{title}</h3>
         <p class="card-weight">{weight}g</p>
       </div>
